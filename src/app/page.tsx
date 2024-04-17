@@ -3,6 +3,7 @@ import { AnimatedName } from "@/portfolioComponents/AnimatedName";
 import Footer from "@/portfolioComponents/Footer";
 import { BentoGridDemo } from "@/portfolioComponents/MyBlogs";
 import { MyProjects } from "@/portfolioComponents/MyProjects";
+import MyTechStack from "@/portfolioComponents/MyTechStack";
 import SmallNote from "@/portfolioComponents/SmallNote";
 import Socials from "@/portfolioComponents/Socials";
 import { InfiniteMovingCardsDemo } from "@/portfolioComponents/Testimonials";
@@ -19,6 +20,7 @@ export default function Home() {
           <MyProjects />
           <BentoGridDemo />
           <WorkExperience />
+          <MyTechStack />
           <InfiniteMovingCardsDemo />
           <SmallNote />
           <Socials />
