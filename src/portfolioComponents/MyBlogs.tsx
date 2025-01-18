@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { cn } from "@/utils/cn";
 import React, { useState } from "react";
 import { BentoGrid, BentoGridItem } from "../genericComponents/BentoGrid";
@@ -13,6 +13,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { Tab } from "@/genericComponents/Tabs";
+
 const propTabs = [
   {
     title: "Playground",
@@ -26,6 +27,40 @@ const propTabs = [
     title: "Random",
     value: "random",
   },
+];
+
+const dummyLyrics = [
+  { value: "It's a beautiful day", duration: 2 },
+  { value: "Don't let it get away", duration: 2 },
+  { value: "It's a beautiful day", duration: 2 },
+  { value: "Touch me, take me to that other place", duration: 2 },
+  { value: "Teach me, yeah, I know I'm not a hopeless case", duration: 2 },
+  // Repeat the existing entries or add new ones to reach a total of at least 30 entries
+  { value: "See the world in green and blue", duration: 2 },
+  { value: "See China right in front of you", duration: 2 },
+  { value: "See the canyons broken by cloud", duration: 2 },
+  { value: "See the tuna fleets clearing the sea out", duration: 2 },
+  { value: "See the Bedouin fires at night", duration: 2 },
+  { value: "See the oil fields at first light", duration: 2 },
+  { value: "See the bird with a leaf in her mouth", duration: 2 },
+  { value: "After the flood, all the colors came out", duration: 2 },
+  { value: "It was a beautiful day", duration: 2 },
+  { value: "Don't let it get away", duration: 2 },
+  { value: "Beautiful day", duration: 2 },
+  { value: "Touch me, take me to that other place", duration: 2 },
+  { value: "Reach me, I know I'm not a hopeless case", duration: 2 },
+  { value: "What you don't have, you don't need it now", duration: 2 },
+  { value: "What you don't know, you can feel it somehow", duration: 2 },
+  { value: "What you don't have, you don't need it now", duration: 2 },
+  { value: "Don't need it now", duration: 2 },
+  { value: "Was a beautiful day", duration: 2 },
+  { value: "It was a beautiful day", duration: 2 },
+  { value: "Yeah, yeah, yeah", duration: 2 },
+  { value: "Touch me, take me to that other place", duration: 2 },
+  { value: "Reach me, I know I'm not a hopeless case", duration: 2 },
+  { value: "What you don't have, you don't need it now", duration: 2 },
+  { value: "Was a beautiful day", duration: 2 },
+  { value: "Oh, oh", duration: 2 },
 ];
 export function BentoGridDemo() {
   const [active, setActive] = useState<Tab>(propTabs[0]);
@@ -44,40 +79,7 @@ export function BentoGridDemo() {
   return (
     <div className="mt-[5rem]">
       <h1 className="text-2xl font-bold mb-2 my-10">Blogs 📰</h1>
-      <div
-        className={cn(
-          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full mt-2"
-        )}
-      >
-        {propTabs.map((tab, idx) => (
-          <button
-            key={tab.title}
-            onClick={() => {
-              moveSelectedTabToTop(idx);
-            }}
-            onMouseEnter={() => setHovering(true)}
-            onMouseLeave={() => setHovering(false)}
-            className={cn("relative px-4 py-2 rounded-full")}
-            style={{
-              transformStyle: "preserve-3d",
-            }}
-          >
-            {active.value === tab.value && (
-              <motion.div
-                layoutId="clickedbutton"
-                transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-                className={cn(
-                  "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full "
-                )}
-              />
-            )}
 
-            <span className="relative block text-black dark:text-white">
-              {tab.title}
-            </span>
-          </button>
-        ))}
-      </div>
       <BentoGrid className="max-w-4xl mx-auto">
         {items.map((item, i) => (
           <BentoGridItem

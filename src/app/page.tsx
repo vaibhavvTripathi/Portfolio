@@ -6,7 +6,7 @@ import { MyProjects } from "@/portfolioComponents/MyProjects";
 import MyTechStack from "@/portfolioComponents/MyTechStack";
 import SmallNote from "@/portfolioComponents/SmallNote";
 import Socials from "@/portfolioComponents/Socials";
-import { InfiniteMovingCardsDemo } from "@/portfolioComponents/Testimonials";
+import { CardStackDemo } from "@/portfolioComponents/Testimonials";
 import WorkExperience from "@/portfolioComponents/WorkExperience";
 import Head from "next/head";
 
@@ -21,7 +21,7 @@ export default function Home() {
           <BentoGridDemo />
           <WorkExperience />
           <MyTechStack />
-          <InfiniteMovingCardsDemo />
+          <CardStackDemo />
           <SmallNote />
           <Socials />
           <Footer />
